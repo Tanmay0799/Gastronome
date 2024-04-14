@@ -1,0 +1,30 @@
+{
+  "name": "gastronome",
+  "version": "1.0.0",
+  "description": "Food App",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/Tanmay0799/Gastronome)"
+  },
+  "author": "Tanmay",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^6.22.3"
+  },
+  "browserlist": [
+    "last 2  version"
+  ]
+}
