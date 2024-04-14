@@ -8,19 +8,19 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <Link to="/">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/3655/3655682.png"
-            alt="Logo"
-            className="logo"
-          />
-        </Link>
+    <div className="flex justify-between bg-purple-800">
+      <div className="hover:scale-110 transition-transform">
+        <img
+          className="h-28 rounded-2xl bg-purple-100"
+          src="https://i.ibb.co/FDTKw4Q/gastronome-high-resolution-logo.png"
+          alt="gastronome-high-resolution-logo"
+        />
       </div>
       <div className="nav-items">
-        <ul>
-          <li>Online Status: {onlineStatus ? "✅" : "⛔"}</li>
+        <ul className="flex p-4 m-4 space-x-4 ">
+          <li className="bg-slate-400">
+            Online Status: {onlineStatus ? "✅" : "⛔"}
+          </li>
           <li>
             <Link to="/" className="links">
               Home
@@ -45,7 +45,7 @@ const Header = () => {
             <Link className="links">Cart</Link>
           </li>
           <button
-            className="loginBtn"
+            className="text-decoration-line: underline"
             onClick={() => {
               //   btnName = 'Logout';
               btnNameReact === "Login"

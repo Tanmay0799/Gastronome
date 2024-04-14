@@ -15,33 +15,24 @@ const RestaurantCard = (props) => {
   } = resData?.info;
 
   return (
-    <div className="m-4 p-4 w-[250px] bg-gray-100 rounded-lg hover:bg-gray-200 transition-all ">
+    <div className="max-w-sm rounded-3xl overflow-hidden shadow-lg mb-4 bg-purple-100 ">
       <div>
-        <img
-          className="w-[250px] h-[150px] rounded-lg"
-          src={CDN_URL + cloudinaryImageId}
-        />
+        <img className="w-full" src={CDN_URL + cloudinaryImageId} />
       </div>
 
-      <div>
-        <h3 className="font-bold py-4 text-lg">{name}</h3>
+      <div className="px-6 py-4">
+        <h3 className="font-bold text-xl mb-2">{name}</h3>
         <hr />
-        <em>{cuisines.join(", ")}</em>
+        <h4 className="text-gray-700 text-base mb-2">{cuisines.join(", ")}</h4>
         <h4 className="avg-rating">
-          <span className="icons">
-            <AiOutlineStar />
-          </span>
-          <span>{avgRating} stars</span>
+          <span>{avgRating}⭐</span>
         </h4>
-        <h4 className="item-price">
-          <span style={{ marginLeft: "4px" }}>₹</span>{" "}
-          <span>{costForTwo / 100} FOR TWO</span>
-        </h4>
+        <h4 className="text-gray-700 text-base"> {costForTwo}</h4>
         <h4 className="time">
           <span className="icons">
             <FiClock />
           </span>
-          <span> {deliveryTime} minutes</span>
+          <h4>{deliveryTime}</h4>
         </h4>
       </div>
     </div>
