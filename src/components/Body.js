@@ -78,7 +78,7 @@ const Body = () => {
       <div className="flex flex-wrap gap-9 p-4">
         {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
 
-        {listOfRestaurants?.map((restaurant) => (
+        {filteredRestaurant.map((restaurant) => (
           <Link
             key={restaurant?.data?.id}
             to={"/restaurants/" + restaurant?.data?.id}

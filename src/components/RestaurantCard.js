@@ -5,36 +5,21 @@ import { AiOutlineStar } from "react-icons/ai";
 const RestaurantCard = (props) => {
   const { resData } = props;
 
-  const {
-    cloudinaryImageId,
-    name,
-    cuisines,
-    avgRating,
-    costForTwo,
-    deliveryTime,
-  } = resData?.info;
+  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, areaName } =
+    resData?.info;
 
   return (
-    <div className="max-w-sm rounded-3xl overflow-hidden shadow-lg mb-4 bg-purple-100 ">
-      <div>
-        <img className="w-full" src={CDN_URL + cloudinaryImageId} />
-      </div>
+    <div className="m-2 p-4 w-[250px] h-[600px] bg-purple-100 rounded-xl hover:bg-purple-200">
+      <img className=" rounded-md h-60" src={CDN_URL + cloudinaryImageId} />
 
-      <div className="px-6 py-4">
-        <h3 className="font-bold text-xl mb-2">{name}</h3>
-        <hr />
-        <h4 className="text-gray-700 text-base mb-2">{cuisines.join(", ")}</h4>
-        <h4 className="avg-rating">
-          <span>{avgRating}⭐</span>
-        </h4>
-        <h4 className="text-gray-700 text-base"> {costForTwo}</h4>
-        <h4 className="time">
-          <span className="icons">
-            <FiClock />
-          </span>
-          <h4>{deliveryTime}</h4>
-        </h4>
-      </div>
+      <h3 className="font-bold text-xl mb-2 py-4">{name}</h3>
+
+      <h4 className="text-gray-700 text-base mb-2">{cuisines.join(", ")}</h4>
+      <h4 className="avg-rating">
+        <span>{avgRating}⭐</span>
+      </h4>
+      <h4 className="text-gray-700 text-base py-2"> {costForTwo}</h4>
+      <h4 className="py-4 font-bold">{areaName}</h4>
     </div>
   );
 };
