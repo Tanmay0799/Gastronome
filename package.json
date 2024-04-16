@@ -2,7 +2,7 @@
   "name": "gastronome",
   "version": "1.0.0",
   "description": "Food App",
-  "main": "index.html",
+  "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
