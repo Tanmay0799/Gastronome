@@ -16,6 +16,11 @@ const Header = () => {
           alt="gastronome-high-resolution-logo"
         />
       </div>
+      <a href="https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf">
+        <div className="flex p-4 m-4 space-x-4 text-decoration-line: underline text-cyan-50">
+          Download plugin too see restaurants
+        </div>
+      </a>
       <div className="nav-items">
         <ul className="flex p-4 m-4 space-x-4 ">
           <li className="bg-slate-400">
