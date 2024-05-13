@@ -11,11 +11,11 @@ const useRestaurantMenu = (resId) => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=243625"
+      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5204303&lng=73.8567437&restaurantId=323532&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER"
     );
     const json = await data.json();
 
-    // console.log(json);
+    console.log(json);
     setResInfo(json.data);
   };
   return resInfo;
